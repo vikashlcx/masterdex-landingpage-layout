@@ -1,25 +1,13 @@
 import { Twitter, Github, MessageCircle } from "lucide-react";
+import masterdexTextLogo from "@/assets/masterdex-text-logo.svg";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border/30 bg-background">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-3">
-            <svg viewBox="0 0 100 100" className="w-8 h-8">
-              <defs>
-                <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="hsl(263, 90%, 65%)" />
-                  <stop offset="100%" stopColor="hsl(300, 70%, 65%)" />
-                </linearGradient>
-              </defs>
-              <circle cx="50" cy="30" r="22" fill="none" stroke="url(#footerGradient)" strokeWidth="3" />
-              <circle cx="30" cy="65" r="22" fill="none" stroke="url(#footerGradient)" strokeWidth="3" />
-              <circle cx="70" cy="65" r="22" fill="none" stroke="url(#footerGradient)" strokeWidth="3" />
-            </svg>
-            <span className="font-bold text-xl">
-              Master<span className="gradient-text">DEX</span>
-            </span>
+          <div className="flex items-center">
+            <img src={masterdexTextLogo} alt="MasterDEX" className="h-6" />
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
