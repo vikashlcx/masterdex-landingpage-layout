@@ -24,10 +24,8 @@ const problems = [
 const WhatIsMasterDEX = () => {
   return (
     <section className="section-container relative">
-      <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent pointer-events-none" />
-      
       <div className="relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="section-heading">
             What is <span className="gradient-text">MasterDEX</span>?
           </h2>
@@ -37,18 +35,18 @@ const WhatIsMasterDEX = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="glass-card glow-border p-8">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">Built for DeFi Traders & Investors</h3>
-            <p className="text-muted-foreground leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-5 mb-14">
+          <div className="glass-card glow-border p-7">
+            <h3 className="text-lg font-semibold mb-3 text-foreground">Built for DeFi Traders & Investors</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Whether you're an active trader hunting the next gem, a long-term investor monitoring your portfolio, 
               or a DeFi explorer discovering new protocols — MasterDEX gives you the tools to navigate the 
               decentralized ecosystem with confidence.
             </p>
           </div>
-          <div className="glass-card glow-border p-8">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">All-in-One DeFi Command Center</h3>
-            <p className="text-muted-foreground leading-relaxed">
+          <div className="glass-card glow-border p-7">
+            <h3 className="text-lg font-semibold mb-3 text-foreground">All-in-One DeFi Command Center</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Stop juggling multiple platforms. MasterDEX consolidates discovery, analytics, and trading into 
               a single powerful interface. Get AI-driven insights, track your entire portfolio, and execute 
               trades across chains — without leaving the platform.
@@ -56,21 +54,21 @@ const WhatIsMasterDEX = () => {
           </div>
         </div>
 
-        <h3 className="text-2xl font-semibold text-center mb-8">Problems We Solve</h3>
-        <div className="grid md:grid-cols-3 gap-6">
+        <h3 className="text-xl font-semibold text-center mb-6">Problems We Solve</h3>
+        <div className="grid md:grid-cols-3 gap-5">
           {problems.map((item, index) => (
             <div 
               key={index} 
-              className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group"
+              className="glass-card p-6 hover:border-primary/40 transition-all duration-300 group"
             >
               <div className="feature-icon mb-4 group-hover:scale-110 transition-transform">
-                <item.icon className="w-6 h-6" />
+                <item.icon className="w-5 h-5" />
               </div>
-              <h4 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h4>
-              <p className="text-sm text-muted-foreground mb-3">
-                <span className="text-destructive/80">Problem:</span> {item.problem}
+              <h4 className="text-base font-semibold mb-3 text-foreground">{item.title}</h4>
+              <p className="text-xs text-muted-foreground mb-2">
+                <span className="text-destructive/70">Problem:</span> {item.problem}
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 <span className="text-primary">Solution:</span> {item.solution}
               </p>
             </div>

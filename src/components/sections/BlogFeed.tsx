@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 
 const blogPosts = [
@@ -25,10 +24,8 @@ const blogPosts = [
 const BlogFeed = () => {
   return (
     <section className="section-container relative">
-      <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent pointer-events-none" />
-      
       <div className="relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <h2 className="section-heading">
             Latest from <span className="gradient-text">MasterDEX</span>
           </h2>
@@ -37,46 +34,45 @@ const BlogFeed = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-3 gap-5 mb-8">
           {blogPosts.map((post, index) => (
             <article 
               key={index}
-              className="glass-card glow-border p-6 group hover:bg-card/80 transition-all duration-300 cursor-pointer"
+              className="glass-card p-5 group hover:border-primary/40 transition-all duration-300 cursor-pointer"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-2 py-0.5 text-[10px] font-medium bg-primary/15 text-primary rounded-full uppercase tracking-wider">
                   {post.category}
                 </span>
-                <span className="flex items-center text-xs text-muted-foreground">
+                <span className="flex items-center text-[10px] text-muted-foreground">
                   <Calendar className="w-3 h-3 mr-1" />
                   {post.date}
                 </span>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+              <h3 className="text-sm font-semibold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-sm text-muted-foreground line-clamp-3">
+              <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">
                 {post.excerpt}
               </p>
-              <div className="mt-4 flex items-center text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-3 flex items-center text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                 Read more
-                <ArrowRight className="w-4 h-4 ml-1" />
+                <ArrowRight className="w-3 h-3 ml-1" />
               </div>
             </article>
           ))}
         </div>
 
         <div className="text-center">
-          <Button 
-            variant="outline"
-            className="border-primary/50 hover:bg-primary/10 text-foreground font-semibold"
-            asChild
+          <a 
+            href="https://blog.masterdex.xyz/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="mdex-button inline-flex items-center gap-2"
           >
-            <a href="https://blog.masterdex.xyz/" target="_blank" rel="noopener noreferrer">
-              View All Blogs
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
+            View All Blogs
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

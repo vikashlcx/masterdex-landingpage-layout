@@ -50,10 +50,8 @@ const features = [
 const ProductCapabilities = () => {
   return (
     <section className="section-container relative">
-      <div className="absolute inset-0 bg-gradient-radial from-glow-cyan/5 via-transparent to-transparent pointer-events-none" />
-      
       <div className="relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="section-heading">
             All-in-One <span className="gradient-text">DeFi Toolkit</span>
           </h2>
@@ -62,24 +60,24 @@ const ProductCapabilities = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="glass-card p-6 hover:border-primary/50 transition-all duration-300 group relative overflow-hidden"
+              className="glass-card p-5 hover:border-primary/40 transition-all duration-300 group relative overflow-hidden"
             >
               {feature.comingSoon && (
                 <div className="absolute top-3 right-3">
-                  <span className="px-2 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full border border-primary/30">
+                  <span className="px-2 py-0.5 text-[10px] font-medium bg-primary/20 text-primary rounded-full border border-primary/30 uppercase tracking-wider">
                     Coming Soon
                   </span>
                 </div>
               )}
               <div className="feature-icon mb-4 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-6 h-6" />
+                <feature.icon className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
+              <h3 className="text-sm font-semibold mb-2 text-foreground">{feature.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
