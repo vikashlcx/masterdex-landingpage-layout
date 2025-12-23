@@ -1,4 +1,5 @@
 import { Search, Compass, LayoutDashboard, ArrowLeftRight } from "lucide-react";
+import masterdexLogo from "@/assets/masterdex-logo.svg";
 
 const stats = [
   { label: "Networks", value: "8" },
@@ -41,21 +42,15 @@ const HeroSection = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto mt-12">
-        {/* Logo */}
+        {/* Official MasterDEX Logo */}
         <div className="mb-8 animate-float">
-          <div className="w-24 h-24 mx-auto relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-pink-500/20 rounded-full blur-2xl" />
-            <svg viewBox="0 0 100 100" className="w-full h-full relative z-10">
-              <defs>
-                <linearGradient id="logoGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="hsl(263, 90%, 65%)" />
-                  <stop offset="100%" stopColor="hsl(300, 70%, 65%)" />
-                </linearGradient>
-              </defs>
-              <circle cx="50" cy="30" r="22" fill="none" stroke="url(#logoGradHero)" strokeWidth="3" />
-              <circle cx="30" cy="65" r="22" fill="none" stroke="url(#logoGradHero)" strokeWidth="3" />
-              <circle cx="70" cy="65" r="22" fill="none" stroke="url(#logoGradHero)" strokeWidth="3" />
-            </svg>
+          <div className="relative inline-block">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-pink-500/20 rounded-full blur-3xl scale-150" />
+            <img 
+              src={masterdexLogo} 
+              alt="MasterDEX Logo" 
+              className="w-28 h-28 md:w-32 md:h-32 relative z-10"
+            />
           </div>
         </div>
 
