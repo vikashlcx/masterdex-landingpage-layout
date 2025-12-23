@@ -8,8 +8,28 @@ const networks = [
     logo: "https://avatars.githubusercontent.com/u/108554348?s=200&v=4",
   },
   {
+    name: "Optimism",
+    logo: "https://cryptologos.cc/logos/optimism-ethereum-op-logo.svg",
+  },
+  {
     name: "Polygon",
     logo: "https://cryptologos.cc/logos/polygon-matic-logo.svg",
+  },
+  {
+    name: "Arbitrum",
+    logo: "https://cryptologos.cc/logos/arbitrum-arb-logo.svg",
+  },
+  {
+    name: "Avalanche",
+    logo: "https://cryptologos.cc/logos/avalanche-avax-logo.svg",
+  },
+  {
+    name: "BNB",
+    logo: "https://cryptologos.cc/logos/bnb-bnb-logo.svg",
+  },
+  {
+    name: "Blast",
+    logo: "https://assets.coingecko.com/coins/images/35494/standard/Blast.jpg",
   }
 ];
 
