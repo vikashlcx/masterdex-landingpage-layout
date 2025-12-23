@@ -1,83 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* MasterDEX Design System - Exact Theme Match */
+/* MasterDEX Design System - Inspired by Uniswap & 1inch */
 
 @layer base {
   :root {
-    /* Core colors - Pure black background with violet accent */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
+    /* Core - Deep black with violet accent */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary - Violet/Purple accent matching MasterDEX */
-    --primary: 263 84% 60%;
+    /* Primary - Vibrant violet */
+    --primary: 263 90% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 80%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 50%;
 
-    --accent: 263 84% 60%;
+    --accent: 263 90% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 50%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 12%;
-    --ring: 263 84% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 263 90% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom MasterDEX tokens */
-    --mdex-violet: 263 84% 60%;
-    --mdex-violet-glow: 263 84% 70%;
-    --mdex-dark: 0 0% 4%;
-    --mdex-card: 0 0% 8%;
-    --mdex-border: 0 0% 20%;
-    --mdex-text-muted: 0 0% 55%;
-
-    --sidebar-background: 0 0% 5%;
+    /* Extended palette */
+    --mdex-violet: 263 90% 58%;
+    --mdex-violet-light: 270 80% 70%;
+    --mdex-pink: 320 80% 60%;
+    --mdex-blue: 220 90% 60%;
+    --mdex-success: 150 70% 45%;
+    
+    --sidebar-background: 0 0% 4%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 263 84% 60%;
+    --sidebar-primary: 263 90% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 263 84% 60%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 263 90% 58%;
   }
 
   .dark {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 263 84% 60%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 90% 58%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 85%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 263 84% 60%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 80%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 263 90% 58%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62% 50%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 18%;
-    --input: 0 0% 12%;
-    --ring: 263 84% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 263 90% 58%;
   }
 }
 
@@ -92,102 +91,147 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 600;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer components {
-  /* Glass card matching MasterDEX style */
+  /* Modern glass card - Uniswap inspired */
   .glass-card {
-    @apply bg-card/80 backdrop-blur-md border border-border rounded-xl;
+    @apply bg-card/90 backdrop-blur-xl border border-border/60 rounded-2xl;
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.4);
   }
 
-  /* Violet glow border effect */
+  .glass-card:hover {
+    @apply border-border;
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Gradient border glow effect */
   .glow-border {
     @apply relative;
-    box-shadow: 0 0 0 1px hsl(var(--mdex-violet) / 0.3);
   }
 
-  .glow-border:hover {
-    box-shadow: 0 0 20px hsl(var(--mdex-violet) / 0.2), 
-                0 0 0 1px hsl(var(--mdex-violet) / 0.5);
+  .glow-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(135deg, 
+      hsl(var(--mdex-violet) / 0.4), 
+      transparent 50%,
+      hsl(var(--mdex-pink) / 0.2));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  /* Gradient text - violet to light violet */
+  .glow-border:hover::before {
+    opacity: 1;
+  }
+
+  /* Gradient text - vibrant violet to pink */
   .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, 
-      hsl(263, 84%, 65%), 
-      hsl(280, 70%, 75%));
+      hsl(263, 90%, 65%), 
+      hsl(300, 70%, 65%));
   }
 
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24 lg:py-32;
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5;
+    letter-spacing: -0.03em;
   }
 
   .section-subheading {
-    @apply text-muted-foreground text-lg md:text-xl max-w-3xl;
+    @apply text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed;
   }
 
+  /* Feature icon - rounded with gradient bg */
   .feature-icon {
-    @apply w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center text-primary;
+    @apply w-14 h-14 rounded-2xl flex items-center justify-center;
+    background: linear-gradient(135deg, 
+      hsl(var(--mdex-violet) / 0.15), 
+      hsl(var(--mdex-pink) / 0.1));
+  }
+
+  .feature-icon svg {
+    @apply text-primary;
   }
 
   .step-number {
-    @apply w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold text-lg border border-primary/40;
+    @apply w-11 h-11 rounded-full flex items-center justify-center font-bold text-base;
+    background: linear-gradient(135deg, 
+      hsl(var(--mdex-violet) / 0.2), 
+      hsl(var(--mdex-pink) / 0.1));
+    color: hsl(var(--primary));
+    border: 1px solid hsl(var(--mdex-violet) / 0.3);
   }
 
-  /* MasterDEX button style */
+  /* Buttons - 1inch inspired minimal style */
   .mdex-button {
-    @apply px-6 py-3 rounded-xl border border-primary/60 bg-transparent text-foreground font-medium transition-all duration-200;
+    @apply px-6 py-3.5 rounded-2xl border border-border bg-card/80 text-foreground font-semibold text-sm transition-all duration-200;
   }
 
   .mdex-button:hover {
-    @apply bg-primary/10 border-primary;
-    box-shadow: 0 0 20px hsl(var(--mdex-violet) / 0.3);
+    @apply bg-muted border-primary/50;
+    box-shadow: 0 0 24px hsl(var(--mdex-violet) / 0.15);
   }
 
   .mdex-button-filled {
-    @apply px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium transition-all duration-200;
+    @apply px-6 py-3.5 rounded-2xl font-semibold text-sm text-white transition-all duration-200;
+    background: linear-gradient(135deg, 
+      hsl(var(--mdex-violet)), 
+      hsl(var(--mdex-pink)));
   }
 
   .mdex-button-filled:hover {
-    @apply bg-primary/90;
-    box-shadow: 0 0 25px hsl(var(--mdex-violet) / 0.4);
+    box-shadow: 0 8px 32px hsl(var(--mdex-violet) / 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Stats pill */
+  .stats-pill {
+    @apply px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-border/50;
   }
 }
 
 @layer utilities {
   .animate-glow-pulse {
-    animation: glow-pulse 3s ease-in-out infinite;
+    animation: glow-pulse 4s ease-in-out infinite;
   }
 
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 0 1px hsl(var(--mdex-violet) / 0.3);
+      box-shadow: 0 0 0 0 transparent;
     }
     50% {
-      box-shadow: 0 0 25px hsl(var(--mdex-violet) / 0.3), 
-                  0 0 0 1px hsl(var(--mdex-violet) / 0.5);
+      box-shadow: 0 0 40px hsl(var(--mdex-violet) / 0.2);
     }
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
   }
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
   }
 
-  /* Particle animation */
-  .particle {
-    @apply absolute w-1 h-1 rounded-full bg-foreground/20;
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }

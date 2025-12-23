@@ -10,7 +10,7 @@ const problems = [
   {
     icon: Search,
     title: "Manual Discovery",
-    problem: "Finding new tokens and pairs requires endless manual searching",
+    problem: "Finding new tokens and pairs requires endless searching",
     solution: "AI-powered discovery surfaces opportunities automatically"
   },
   {
@@ -25,51 +25,49 @@ const WhatIsMasterDEX = () => {
   return (
     <section className="section-container relative">
       <div className="relative">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <h2 className="section-heading">
             What is <span className="gradient-text">MasterDEX</span>?
           </h2>
           <p className="section-subheading mx-auto">
-            MasterDEX is a multichain decentralized exchange platform that combines AI-powered token discovery, 
-            a comprehensive DEX explorer, portfolio tracking, and seamless cross-chain swaps — all in one unified interface.
+            A multichain decentralized exchange platform combining AI-powered token discovery, 
+            portfolio tracking, and seamless cross-chain swaps — all in one unified interface.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5 mb-14">
-          <div className="glass-card glow-border p-7">
-            <h3 className="text-lg font-semibold mb-3 text-foreground">Built for DeFi Traders & Investors</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Whether you're an active trader hunting the next gem, a long-term investor monitoring your portfolio, 
-              or a DeFi explorer discovering new protocols — MasterDEX gives you the tools to navigate the 
-              decentralized ecosystem with confidence.
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <div className="glass-card glow-border p-8">
+            <h3 className="text-xl font-bold mb-4 text-foreground">Built for DeFi Traders</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Whether you're an active trader hunting the next gem or a long-term investor — 
+              MasterDEX gives you the tools to navigate the decentralized ecosystem with confidence.
             </p>
           </div>
-          <div className="glass-card glow-border p-7">
-            <h3 className="text-lg font-semibold mb-3 text-foreground">All-in-One DeFi Command Center</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Stop juggling multiple platforms. MasterDEX consolidates discovery, analytics, and trading into 
-              a single powerful interface. Get AI-driven insights, track your entire portfolio, and execute 
-              trades across chains — without leaving the platform.
+          <div className="glass-card glow-border p-8">
+            <h3 className="text-xl font-bold mb-4 text-foreground">All-in-One Command Center</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Stop juggling multiple platforms. Get AI-driven insights, track your entire portfolio, 
+              and execute trades across chains — without leaving the platform.
             </p>
           </div>
         </div>
 
-        <h3 className="text-xl font-semibold text-center mb-6">Problems We Solve</h3>
-        <div className="grid md:grid-cols-3 gap-5">
+        <h3 className="text-2xl font-bold text-center mb-8">Problems We Solve</h3>
+        <div className="grid md:grid-cols-3 gap-6">
           {problems.map((item, index) => (
             <div 
               key={index} 
-              className="glass-card p-6 hover:border-primary/40 transition-all duration-300 group"
+              className="glass-card glow-border p-7 group"
             >
-              <div className="feature-icon mb-4 group-hover:scale-110 transition-transform">
-                <item.icon className="w-5 h-5" />
+              <div className="feature-icon mb-5 group-hover:scale-110 transition-transform duration-300">
+                <item.icon className="w-6 h-6" />
               </div>
-              <h4 className="text-base font-semibold mb-3 text-foreground">{item.title}</h4>
-              <p className="text-xs text-muted-foreground mb-2">
-                <span className="text-destructive/70">Problem:</span> {item.problem}
+              <h4 className="text-lg font-bold mb-3 text-foreground">{item.title}</h4>
+              <p className="text-sm text-muted-foreground mb-2">
+                <span className="text-destructive/70 font-medium">Problem:</span> {item.problem}
               </p>
-              <p className="text-xs text-muted-foreground">
-                <span className="text-primary">Solution:</span> {item.solution}
+              <p className="text-sm text-muted-foreground">
+                <span className="text-primary font-medium">Solution:</span> {item.solution}
               </p>
             </div>
           ))}
