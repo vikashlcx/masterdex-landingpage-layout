@@ -13,11 +13,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden bg-background">
       {/* Gradient background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Top gradient orb */}
         <div className="absolute -top-[40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-b from-primary/20 via-primary/5 to-transparent blur-3xl" />
-        {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-primary/5 to-transparent" />
-        {/* Subtle grid pattern */}
         <div 
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -43,26 +40,22 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto mt-12">
         {/* Official MasterDEX Logo */}
-        <div className="mb-8 animate-float">
+        <div className="mb-6 animate-float">
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-pink-500/20 rounded-full blur-3xl scale-150" />
             <img 
               src={masterdexLogo} 
-              alt="MasterDEX Logo" 
-              className="w-28 h-28 md:w-32 md:h-32 relative z-10"
+              alt="MasterDEX - All-in-One Gateway to Decentralized Trading" 
+              className="w-40 h-40 md:w-48 md:h-48 relative z-10"
             />
           </div>
         </div>
 
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-5 tracking-tight">
-          Master<span className="gradient-text">DEX</span>
-        </h1>
-        
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-medium">
           All-in-One Gateway to Decentralized Trading
         </p>
 
-        {/* Search bar - Uniswap style */}
+        {/* Search bar */}
         <div className="glass-card glow-border p-2 max-w-xl mx-auto mb-12">
           <div className="flex items-center gap-3 px-5 py-4 rounded-xl bg-secondary/50">
             <Search className="w-5 h-5 text-muted-foreground" />
@@ -75,7 +68,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Action buttons - Clean modern style */}
+        {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="mdex-button flex items-center justify-center gap-3 group">
             <Compass className="w-5 h-5 text-primary" />
