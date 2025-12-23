@@ -9,7 +9,7 @@ const blogPosts = [
   },
   {
     title: "Understanding Cross-Chain Swaps: A Complete Guide",
-    excerpt: "Learn how cross-chain swaps work and why they're essential for navigating the multichain DeFi landscape efficiently.",
+    excerpt: "Learn how cross-chain swaps work and why they're essential for navigating the multichain DeFi landscape.",
     date: "Dec 2024",
     category: "Education"
   },
@@ -25,7 +25,7 @@ const BlogFeed = () => {
   return (
     <section className="section-container relative">
       <div className="relative">
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="section-heading">
             Latest from <span className="gradient-text">MasterDEX</span>
           </h2>
@@ -34,30 +34,30 @@ const BlogFeed = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
           {blogPosts.map((post, index) => (
             <article 
               key={index}
-              className="glass-card p-5 group hover:border-primary/40 transition-all duration-300 cursor-pointer"
+              className="glass-card glow-border p-6 group cursor-pointer"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-0.5 text-[10px] font-medium bg-primary/15 text-primary rounded-full uppercase tracking-wider">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="px-3 py-1 text-[10px] font-semibold bg-primary/15 text-primary rounded-full uppercase tracking-wider">
                   {post.category}
                 </span>
-                <span className="flex items-center text-[10px] text-muted-foreground">
+                <span className="flex items-center text-xs text-muted-foreground">
                   <Calendar className="w-3 h-3 mr-1" />
                   {post.date}
                 </span>
               </div>
-              <h3 className="text-sm font-semibold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+              <h3 className="text-lg font-bold mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">
+              <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
                 {post.excerpt}
               </p>
-              <div className="mt-3 flex items-center text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-4 flex items-center text-sm text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                 Read more
-                <ArrowRight className="w-3 h-3 ml-1" />
+                <ArrowRight className="w-4 h-4 ml-1" />
               </div>
             </article>
           ))}
