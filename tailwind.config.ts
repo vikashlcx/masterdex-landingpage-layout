@@ -14,8 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,21 +60,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        glow: {
-          purple: "hsl(var(--glow-purple))",
-          cyan: "hsl(var(--glow-cyan))",
-        },
-        glass: {
-          bg: "hsl(var(--glass-bg))",
-          border: "hsl(var(--glass-border))",
+        mdex: {
+          violet: "hsl(var(--mdex-violet))",
+          "violet-glow": "hsl(var(--mdex-violet-glow))",
+          dark: "hsl(var(--mdex-dark))",
+          card: "hsl(var(--mdex-card))",
+          border: "hsl(var(--mdex-border))",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        "2xl": "1rem",
-        "3xl": "1.5rem",
+        xl: "1rem",
+        "2xl": "1.25rem",
       },
       keyframes: {
         "accordion-down": {
@@ -90,20 +88,11 @@ export default {
           from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        shimmer: {
-          from: { backgroundPosition: "200% 0" },
-          to: { backgroundPosition: "-200% 0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
-        shimmer: "shimmer 8s ease-in-out infinite",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-primary": "linear-gradient(135deg, hsl(var(--glow-purple)), hsl(var(--glow-cyan)))",
       },
     },
   },
