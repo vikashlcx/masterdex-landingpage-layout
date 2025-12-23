@@ -1,7 +1,7 @@
 const networks = [
   {
     name: "Ethereum",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png",
+    logo: "https://cryptologos.cc/logos/ethereum-eth-logo.svg",
   },
   {
     name: "Base",
@@ -9,27 +9,7 @@ const networks = [
   },
   {
     name: "Polygon",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png",
-  },
-  {
-    name: "Optimism",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/optimism/info/logo.png",
-  },
-  {
-    name: "Avalanche",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/avalanchec/info/logo.png",
-  },
-  {
-    name: "Arbitrum",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/info/logo.png",
-  },
-  {
-    name: "BNB Chain",
-    logo: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/info/logo.png",
-  },
-  {
-    name: "Blast",
-    logo: "https://assets.coingecko.com/coins/images/35494/standard/blast.jpg",
+    logo: "https://cryptologos.cc/logos/polygon-matic-logo.svg",
   }
 ];
 
