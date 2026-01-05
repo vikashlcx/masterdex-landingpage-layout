@@ -52,7 +52,7 @@ const HeroSection = () => {
         </div>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-medium">
-          All-in-One Gateway to Decentralized Trading
+          Everything DeFi. One Interface.
         </p>
 
         {/* Search bar */}
